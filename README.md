@@ -1,2 +1,13 @@
 # date-utilities-python
 A simple and efficient Python script that reads a date from standard input and returns the corresponding day of the week
+
+# saves as day_of_week.py
+import sys
+from datetime import datetime
+
+s = sys.stdin.read().strip()          # e.g. "08 05 2015"
+if not s:
+    sys.exit(0)
+mm, dd, yyyy = map(int, s.split())
+dow = datetime(yyyy, mm, dd).strftime("%A").upper()
+print(dow)   give me repository name 
