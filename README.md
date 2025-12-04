@@ -1,13 +1,10 @@
-# date-utilities-python
-A simple and efficient Python script that reads a date from standard input and returns the corresponding day of the week
+A simple and efficient Python script that reads a date from standard input and returns the corresponding day of the week in uppercase format.
+This utility uses Python’s built-in datetime module and works for any valid date.
 
-# saves as day_of_week.py
-import sys
-from datetime import datetime
+📌 Features
 
-s = sys.stdin.read().strip()          # e.g. "08 05 2015"
-if not s:
-    sys.exit(0)
-mm, dd, yyyy = map(int, s.split())
-dow = datetime(yyyy, mm, dd).strftime("%A").upper()
-print(dow)   give me repository name 
+- Converts any date into its weekday name
+- Accepts input in MM DD YYYY format
+- Outputs the weekday name in UPPERCASE
+- Lightweight and easy to integrate into other scripts
+- Useful for coding challenges, automation, and learning datetime functions
